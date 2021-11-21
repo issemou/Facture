@@ -27,6 +27,9 @@ namespace Facture
         {
             return repository.GetAll();
         }
-
+        public void Reboot()
+        {
+            repository.Reboot();
+        }
     }
 }

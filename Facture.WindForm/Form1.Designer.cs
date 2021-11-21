@@ -42,6 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.linkLabelFacture = new System.Windows.Forms.LinkLabel();
+            this.btnRebootlist = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -161,12 +162,26 @@
             this.linkLabelFacture.Text = "GO TO FACTURE";
             this.linkLabelFacture.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFacture_LinkClicked);
             // 
+            // btnRebootlist
+            // 
+            this.btnRebootlist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRebootlist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRebootlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRebootlist.Location = new System.Drawing.Point(38, 12);
+            this.btnRebootlist.Name = "btnRebootlist";
+            this.btnRebootlist.Size = new System.Drawing.Size(98, 31);
+            this.btnRebootlist.TabIndex = 14;
+            this.btnRebootlist.Text = "Vide list";
+            this.btnRebootlist.UseVisualStyleBackColor = true;
+            this.btnRebootlist.Click += new System.EventHandler(this.btnRebootlist_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 210);
+            this.Controls.Add(this.btnRebootlist);
             this.Controls.Add(this.linkLabelFacture);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txbRemise);
@@ -204,6 +219,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.LinkLabel linkLabelFacture;
+        private System.Windows.Forms.Button btnRebootlist;
     }
 }
 

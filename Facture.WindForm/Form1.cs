@@ -39,5 +39,10 @@ namespace Facture.WindForm
             Form form = new Preview();
             form.Show();
         }
+
+        private void btnRebootlist_Click(object sender, EventArgs e)
+        {
+            ProductManager.Reboot();
+        }
     }
 }
