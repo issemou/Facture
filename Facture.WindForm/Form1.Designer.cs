@@ -42,7 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.linkLabelFacture = new System.Windows.Forms.LinkLabel();
-            this.btnRebootlist = new System.Windows.Forms.Button();
+            this.linkLabelBilan = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -154,7 +154,7 @@
             // linkLabelFacture
             // 
             this.linkLabelFacture.AutoSize = true;
-            this.linkLabelFacture.Location = new System.Drawing.Point(190, 188);
+            this.linkLabelFacture.Location = new System.Drawing.Point(49, 188);
             this.linkLabelFacture.Name = "linkLabelFacture";
             this.linkLabelFacture.Size = new System.Drawing.Size(94, 13);
             this.linkLabelFacture.TabIndex = 13;
@@ -162,18 +162,16 @@
             this.linkLabelFacture.Text = "GO TO FACTURE";
             this.linkLabelFacture.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFacture_LinkClicked);
             // 
-            // btnRebootlist
+            // linkLabelBilan
             // 
-            this.btnRebootlist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRebootlist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRebootlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRebootlist.Location = new System.Drawing.Point(38, 12);
-            this.btnRebootlist.Name = "btnRebootlist";
-            this.btnRebootlist.Size = new System.Drawing.Size(98, 31);
-            this.btnRebootlist.TabIndex = 14;
-            this.btnRebootlist.Text = "Vide list";
-            this.btnRebootlist.UseVisualStyleBackColor = true;
-            this.btnRebootlist.Click += new System.EventHandler(this.btnRebootlist_Click);
+            this.linkLabelBilan.AutoSize = true;
+            this.linkLabelBilan.Location = new System.Drawing.Point(352, 188);
+            this.linkLabelBilan.Name = "linkLabelBilan";
+            this.linkLabelBilan.Size = new System.Drawing.Size(75, 13);
+            this.linkLabelBilan.TabIndex = 14;
+            this.linkLabelBilan.TabStop = true;
+            this.linkLabelBilan.Text = "GO TO BILAN";
+            this.linkLabelBilan.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelBilan_LinkClicked);
             // 
             // Form1
             // 
@@ -181,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 210);
-            this.Controls.Add(this.btnRebootlist);
+            this.Controls.Add(this.linkLabelBilan);
             this.Controls.Add(this.linkLabelFacture);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txbRemise);
@@ -197,6 +195,7 @@
             this.Controls.Add(this.txbRef);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddProduct";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,7 +218,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.LinkLabel linkLabelFacture;
-        private System.Windows.Forms.Button btnRebootlist;
+        private System.Windows.Forms.LinkLabel linkLabelBilan;
     }
 }
 

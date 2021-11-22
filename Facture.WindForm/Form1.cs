@@ -15,6 +15,7 @@ namespace Facture.WindForm
     public partial class Form1 : Form
     {
         ProductManager ProductManager = new ProductManager();
+        BilanManager BilanManager = new BilanManager();
         public Form1()
         {
             InitializeComponent();
@@ -23,9 +24,11 @@ namespace Facture.WindForm
         private void btnSave_Click(object sender, EventArgs e)
         {
             Product product= new Product(txbRef.Text,txbName.Text,double.Parse(txbPrice.Text),double.Parse(txbQuantity.Text),double.Parse(txbTVA.Text),double.Parse(txbRemise.Text));
+            Bilan Bilan = new Bilan(txbRef.Text, txbName.Text, double.Parse(txbPrice.Text), double.Parse(txbQuantity.Text), double.Parse(txbTVA.Text), double.Parse(txbRemise.Text));
             try
             {
                     ProductManager.AddProduct(product);
+                BilanManager.AddBilan(Bilan);
                     MessageBox.Show("DONE!");
             }
             catch (Exception)
@@ -38,11 +41,24 @@ namespace Facture.WindForm
         {
             Form form = new Preview();
             form.Show();
+            ProductManager.Reboot();
+            Reset();
         }
 
-        private void btnRebootlist_Click(object sender, EventArgs e)
+        public void Reset()
         {
-            ProductManager.Reboot();
+            txbName.Text = "";
+            txbPrice.Text = "";
+            txbQuantity.Text = "";
+            txbRef.Text = "";
+            txbRemise.Text = "";
+            txbTVA.Text = "";
+        }
+
+        private void linkLabelBilan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form form = new ProductSellForm();
+            form.Show();
         }
     }
 }

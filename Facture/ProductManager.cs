@@ -31,5 +31,10 @@ namespace Facture
         {
             repository.Reboot();
         }
+        public List<Product> products()
+        {
+            var list = repository.GetAll();
+            return list;
+        }
     }
 }

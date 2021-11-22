@@ -9,6 +9,7 @@ namespace Facture.DAL
 {
     public class ProductRepository:BaseRepository<Product>
     {
+
         public void Reboot()
         {
             datas.Clear();
